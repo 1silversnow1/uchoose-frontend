@@ -15,7 +15,7 @@ const bs = require('browser-sync').get('devServer');
 
 // Styles
 gulp.task('styles', function () {
-  return gulp.src('./app/styles/**/*', {base: 'app'})
+  return gulp.src('./app/styles/app.scss', {base: 'app'})
     .pipe(plumber({
       errorHandler: notify.onError(function(err) {
         return {
