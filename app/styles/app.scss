@@ -5,10 +5,554 @@
   box-sizing: border-box;
 }
 
-.block {
-  width: 100%;
-  height: 300px;
-  border: 1px solid black;
-  border-radius: 10px;
+$yellow:#ff9329;
+$green:#aee22d;
+$blue:#3bc5c2;
+* {
+  box-sizing:border-box;
+}
+.container{
+  width:100%;
+  position:relative;
+}
+.wrapper{
+  width:1020px;
+  margin:0 auto;
+}
+.wrapper.flex{
+  display:flex;
+  justify-content: space-between;
+}
+.header{
+  height:50px;
+  background: #130a22;
+  align-items: center;
+  display:flex;
+  .flex{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header--tittle a{
+    padding:5px;
+    color: #807396;
+    font-family: "Century Gothic";
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .header--nav{
+    height: 30px;
+    .header__favorit1{
+
+      margin-right:6px;
+    }
+    li{
+      border-right: 1px solid #807396;
+      padding: 0 20px;
+
+      a{
+        color: #807396;
+        font-family: "Century Gothic";
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:hover{
+          color:#beb6cc;
+        }
+      }
+      &:last-child{
+        border-right:0;
+      }
+    }
+  }
+}
+.header--search{
+  height:160px;
+  background: #281a3f;
+  //background:url(../img/bg.png), no-repeat;
+  display: flex;
+  align-items: center;
+  .search-wrapper{
+    display: flex;
+    justify-content: center;
+    height: 116px;
+    position: relative;
+
+    .svg__left{
+      position: absolute;
+      left:-270px;
+      top:-14px;
+      width: 398px;
+      height:150px;
+      background: url(../img/svg_left.png), no-repeat;
+    }
+    .svg__right{
+      position: absolute;
+      right:-230px;
+      top:-14px;
+      width: 357px;
+      height:150px;
+      background: url(../img/svg_right.png), no-repeat;
+    }
+    .search--input--wrapper{
+      display: flex;
+      margin-bottom: 18px;
+      .search__input{
+        width: 560px;
+        height: 50px;
+        background-color: #f6fafd;
+        border:0;
+        color: #2a353f;
+        font: 14px "Gotham Pro", sans-serif;
+        padding: 0 13px;
+      }
+      .search__btn{
+        display: flex;
+        width: 140px;
+        height: 50px;
+        background-color: #ffb629;
+        border: 0;
+        cursor: pointer;
+        .btn--text{
+          margin: auto;
+          color: #ffffff;
+          font:20px "Century Gothic", sans-serif;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
+.search--result--wrapper{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  select{
+    width: 165px;
+    height: 50px;
+  }
+}
+.content{
+  .filter--wrapper{
+    padding: 20px 30px;
+    width: 300px;
+    background-color: #f3f5f6;
+    .filter--wrapper__inner{
+      width: 240px;
+      .filter__stars{
+        .filter__inner1{
+          .will{
+            color: #2a353f;
+            font: 16px "Century Gothic", sans-serif;
+            font-weight: 700;
+          }
+          .count__star{
+            margin-top: 29px;
+            color: #2a353f;
+            font: 14px "Gotham Pro", sans-serif;
+            display:flex;
+            justify-content: space-between;
+          }
+          .block__stars{
+            margin-top: 20px;
+            display:flex;
+            justify-content: space-between;
+            padding-bottom:20px;
+            border-bottom:4px solid #ffffff;
+            .stars__inner{
+              width: 41px;
+              height: 41px;
+              border: 4px solid #d2d2d2;
+              display:flex;
+              &:hover{
+                border: 4px solid #281a3f;
+              }
+              .star__img{
+                width: 14px;
+                height: 14px;
+                margin:auto;
+              }
+            }
+          }
+
+        }
+
+      }
+    }
+    .filter__food{
+      border-bottom:4px solid #ffffff;
+      padding-bottom:20px;
+
+      .checkboxes{
+        margin-top: 20px;
+        color: #2a353f;
+        font: 14px "Gotham Pro", sans-serif;
+        display:flex;
+        justify-content: space-between;
+
+      }
+      .check-box.distance{
+        margin-top: 25px;
+      }
+      .check-box{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        label{
+          display: flex;
+          align-items: center;
+          span{
+            color: #b7b7b7;
+            font: 14px "Gotham Pro", sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 7px;
+          }
+
+          &:hover>span{
+            color: #24133d;
+          }
+        }
+        input.filter__checkbox{
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+
+    .filter__stop{
+      border-bottom:4px solid #ffffff;
+      padding-bottom:20px;
+      .check-box.distance{
+        margin-top: 25px;
+      }
+      .check-box{
+        display: flex;
+        justify-content: space-between;
+
+        margin-top: 20px;
+        img{
+          height: 18px;
+        }
+        label{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          span{
+            color: #b7b7b7;
+            font: 14px "Gotham Pro", sans-serif;
+            font-weight: 700;
+            margin-left: 7px;
+          }
+
+          &:hover>span{
+            color: #24133d;
+          }
+        }
+        input.filter__checkbox{
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+    .filter__nights{
+      border-bottom:4px solid #ffffff;
+      padding-bottom:20px;
+      .night__sum{
+        margin-top: 20px;
+        color: #2a353f;
+        font: 14px "Gotham Pro", sans-serif;
+      }
+      .nights__select {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 17px;
+        select{
+          width: 110px;
+          height: 48px;
+        }
+      }
+    }
+    .filter__price{
+      padding-bottom:20px;
+      .reset__btn{
+        margin-top: 20px;
+        text-align: center;
+        color: #6e7882;
+        font: 14px "Gotham Pro", sans-serif;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+      .btn__enter{
+        margin-top: 24px;
+        width: 240px;
+        height: 50px;
+        background-color: #281a3f;
+        display: flex;
+        cursor: pointer;
+        span{
+          margin: auto;
+          color: #ffffff;
+          font: 16px "Century Gothic";
+          font-weight: 700;
+        }
+      }
+      img.scroll{
+        display: block;
+        margin-top: 14px;
+      }
+      .price__inner{
+        margin-top: 20px;
+        color: #2a353f;
+        font: 14px "Gotham Pro", sans-serif;
+      }
+
+      .from-to{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .price__from{
+          span{
+            font: 14px "Gotham Pro", sans-serif;
+          }
+          input{
+            width: 110px;
+            height:35px;
+            margin-top:8px;
+            font: 13px "Gotham Pro", sans-serif;
+            color: #281a3f;
+            font-weight: 700;
+          }
+        }
+        .price__to{
+          span{
+            font: 14px "Gotham Pro", sans-serif;
+          }
+          input{
+            width: 110px;
+            height:35px;
+            margin-top:8px;
+            font: 13px "Gotham Pro", sans-serif;
+            color: #281a3f;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  .all--results--wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .results--wrapper{
+    padding-top: 21px;
+    .results--header{
+      margin-bottom: 20px;
+      width: 700px;
+      display: flex;
+      justify-content: space-between;
+      .betr__offer{
+        color: #2a353f;
+        font: 16px "Century Gothic", sans-serif;
+        font-weight: 700;
+      }
+      .sort__price{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .sort__text{
+          color: #969696;
+          font: 13px "Century Gothic", sans-serif;
+          text-transform: uppercase;
+          span{
+            font-weight: 700;
+          }
+
+        }
+        img{
+          width:9px;
+          height:4px;
+          margin-left: 7px;
+        }
+      }
+    }
+    .result--request{
+      margin-bottom: 17px;
+      display: flex;
+      flex-direction: column;
+      &:last-child{
+        margin-bottom: 32px;
+      }
+      .request--wrapper.blue{
+        border: 4px solid $blue;
+      }
+      .request--wrapper.yellow{
+        border: 4px solid $yellow;
+      }
+      .request--wrapper{
+        width: 700px;
+        height: 205px;
+        border: 4px solid $green;
+        display: flex;
+        justify-content: space-between;
+        padding: 15px;
+        .img__holet{
+          width: 170px;
+          height: 170px;
+          background: url(../img/hotel.png);
+        }
+        .request__descript{
+          width: 467px;
+          .descript--header{
+            display: flex;
+            align-items: center;
+            .tittle__hotel{
+              color: #130a22;
+              font:18px "Century Gothic";
+              font-weight: 700;
+            }
+            .hotel--stars{
+              width: 55px;
+              display: flex;
+              justify-content: space-between;
+              margin-left: 10px;
+              img.score--stars{
+                width: 9px;
+                height: 9px;
+              }
+            }
+          }
+          .trip__view{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 19px;
+            .trip__decript{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 133px;
+              color: #130a22;
+              font:13px "Gotham Pro", sans-serif;
+              font-size: 13px;
+              span,.trip__city{
+                font-weight: 700;
+              }
+            }
+            .trip__order.yellow{
+              border-left:4px solid $yellow;
+            }
+            .trip__order.blue{
+              border-left:4px solid $blue;
+            }
+
+            .trip__order{
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              border-left:4px solid #a6ce44;
+              padding-left: 13px;
+              .order__price{
+                margin-top: -5px;
+                color: #130a22;
+                font: 24px "Century Gothic", sans-serif;
+                font-weight: 700;
+              }
+              .price__dbl{
+                color: #8c8c8c;
+                font: 13px "Gotham Pro", sans-serif;
+                span{
+                  font-weight: 700;
+                }
+              }
+              .hotel_about{
+                display: flex;
+                justify-content: space-between;
+
+                .hotel__foto{
+                  padding: 10px;
+                  background-color: #f3f5f6;
+                  font: 13px "Century Gothic", sans-serif;
+                  color: #656565;
+                  font-weight: 700;
+                  cursor:pointer;							}
+                .hotel__inf{
+                  padding: 10px;
+                  background-color: #f3f5f6;
+                  font: 13px "Century Gothic", sans-serif;
+                  color: #656565;
+                  font-weight: 700;
+                  margin-left: 8px;
+                  cursor: pointer;
+                }
+              }
+              .order__btn.blue{
+                background-color: $blue;
+              }
+              .order__btn.yellow{
+                background-color: $yellow;
+              }
+              .order__btn{
+                width: 181px;
+                height: 40px;
+                background-color: $green;
+                color: #ffffff;
+                font: 18px "Century Gothic", sans-serif;
+                font-weight: 700;
+                display: flex;
+                cursor: pointer;
+                span{
+                  margin: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.slider--arrows{
+  display: flex;
+  justify-content: space-between;
+  width: 320px;
+  align-items: center;
+  margin: 0 auto;
+  img{
+    width: 25px;
+    height: 16px;
+  }
+
+  .page{
+    width: 40px;
+    height: 40px;
+    border: 4px solid #3bc5c2;
+    display: flex;
+    span{
+      margin:auto;
+      color: #3bc5c2;
+      font: 14px "Century Gothic", sans-serif;
+      font-weight: 700;
+
+    }
+  }
+
 }
 
+.footer{
+  height: 60px;
+  background: #281a3f;
+  display: flex;
+  margin-top: 32px;
+  .sign--company{
+    margin:auto;
+    color: #ffffff;
+    font: 14px "Century Gothic", sans-serif;
+    span{
+      font-weight: 700;
+    }
+
+  }
+}
