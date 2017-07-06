@@ -205,19 +205,90 @@ $blue: #3bc5c2;
 
       }
     }
+
+
+    .control-group {
+      display: flex;
+      justify-content: space-between;
+      vertical-align: top;
+      text-align: left;
+    }
+    .control {
+      display: flex;
+      position: relative;
+      padding-left: 25px;
+      padding-top: 4px;
+      cursor: pointer;
+      color: #b7b7b7;
+      font: 14px "Gotham Pro", sans-serif;
+      font-weight: 700;
+    }
+    .control input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+    }
+    .block{
+      display: flex;
+      margin-right: 20px;
+      width: 9px;
+      height: 9px;
+      border: 2px solid blue;
+    }
+
+    .control--checkbox .control__indicator:after {
+      left: 4px;
+      top: 1px;
+      width: 4px;
+      height: 8px;
+      border: solid #24133d;
+      border-width: 0 2px 2px 0;
+      transform: rotate(45deg);
+    }
+
+    .control--checkbox:hover{
+      color:#24133d;
+    }
+    .control:hover input ~ .control__indicator {
+      border: 2px solid #24133d;
+    }
+
+
+    .control input:checked ~ .control__indicator {
+      border: 2px solid #24133d;
+    }
+
+    .control__indicator {
+      position: absolute;
+      top: 2px;
+      left: 0;
+      height: 18px;
+      width: 18px;
+      border: 2px solid #d2d2d2;
+    }
+    .control input:checked ~ .control__indicator:after {
+      display: block;
+    }
+
+    .control__indicator:after {
+      content: '';
+      position: absolute;
+      display: none;
+    }
+
     .filter__food{
       border-bottom: 4px solid #ffffff;
       padding-bottom: 20px;
 
       .checkboxes{
-        margin-top: 20px;
+        margin: 20px 0;
         color: #2a353f;
         font: 14px "Gotham Pro", sans-serif;
         display: flex;
         justify-content: space-between;
 
       }
-      .check-box.distance{
+      .control-group.distance{
         margin-top: 25px;
       }
       .check-box{
