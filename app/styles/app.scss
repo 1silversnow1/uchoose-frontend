@@ -70,6 +70,7 @@ $blue: #3bc5c2;
       }
       &:last-child{
         border-right: 0;
+        padding-right: 0;
       }
     }
   }
@@ -77,6 +78,7 @@ $blue: #3bc5c2;
 
 .header--search{
   height: 160px;
+  overflow: hidden;
   background: #281a3f;
   //background:url(../img/bg.png), no-repeat;
   display: flex;
@@ -101,19 +103,24 @@ $blue: #3bc5c2;
     justify-content: center;
     height: 116px;
     position: relative;
+    .header-form {
+      position: relative;
+    }
 
     .svg__left{
       position: absolute;
-      left: -270px;
-      top: -14px;
+      left: 0;
+      transform: translateX(-105%);
+      toP: -11px;
       width: 398px;
       height: 150px;
-      background: url(../img/svg_left.png), no-repeat;
+      background: url(../img/svg_left.png),no-repeat;
     }
     .svg__right{
       position: absolute;
-      right: -230px;
-      top: -14px;
+      right: 0px;
+      top: -9px;
+      transform: translateX(105%);
       width: 357px;
       height: 150px;
       background: url(../img/svg_right.png), no-repeat;
