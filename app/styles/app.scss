@@ -18,9 +18,11 @@ $blue: #3bc5c2;
   padding: 0;
   margin: 0 auto;
 }
+
 .all--results--wrapper.center--auto{
-  margin:0 auto;
+  margin: 0 auto;
 }
+
 .wrapper{
   width: 1020px;
   margin: 0 auto;
@@ -86,11 +88,11 @@ $blue: #3bc5c2;
     width: 260px;
     height: 50px;
     background-color: #ff9329;
-    margin:auto;
+    margin: auto;
     cursor: pointer;
     span{
       display: flex;
-      margin:auto;
+      margin: auto;
       color: #ffffff;
       font: 20px "Century Gothic", sans-serif;
       font-weight: 700;
@@ -206,14 +208,13 @@ $blue: #3bc5c2;
       }
     }
 
-
-    .control-group {
+    .control-group{
       display: flex;
       justify-content: space-between;
       vertical-align: top;
       text-align: left;
     }
-    .control {
+    .control{
       display: flex;
       position: relative;
       padding-left: 25px;
@@ -224,7 +225,7 @@ $blue: #3bc5c2;
       font-weight: 700;
 
     }
-    .control input {
+    .control input{
       position: absolute;
       z-index: -1;
       opacity: 0;
@@ -238,7 +239,7 @@ $blue: #3bc5c2;
       border: 2px solid blue;
     }
 
-    .control--checkbox .control__indicator:after {
+    .control--checkbox .control__indicator:after{
       left: 4px;
       top: 1px;
       width: 4px;
@@ -249,22 +250,18 @@ $blue: #3bc5c2;
     }
 
     .control--checkbox:hover{
-      color:#24133d;
-    }
-    .control:hover input ~ .control__indicator {
-      border: 2px solid #24133d;
-    }
-
-    .control input:checked ~ .control__indicator {
-      border: 2px solid #24133d;
-    }
-
-    .control input:checked {
       color: #24133d;
     }
-
-
-    .control__indicator {
+    .control:hover input ~ .control__indicator{
+      border: 2px solid #24133d;
+    }
+    .control input:checked ~ .control__indicator{
+      border: 2px solid #24133d;
+    }
+    .control input:checked{
+      color: #24133d;
+    }
+    .control__indicator{
       position: absolute;
       top: 2px;
       left: 0;
@@ -272,11 +269,11 @@ $blue: #3bc5c2;
       width: 18px;
       border: 2px solid #d2d2d2;
     }
-    .control input:checked ~ .control__indicator:after {
+    .control input:checked ~ .control__indicator:after{
       display: block;
     }
 
-    .control__indicator:after {
+    .control__indicator:after{
       content: '';
       position: absolute;
       display: none;
@@ -292,7 +289,6 @@ $blue: #3bc5c2;
         font: 14px "Gotham Pro", sans-serif;
         display: flex;
         justify-content: space-between;
-
       }
       .control-group.distance{
         margin-top: 25px;
@@ -450,10 +446,10 @@ $blue: #3bc5c2;
     justify-content: space-between;
   }
   .results--wrapper.center--auto{
-  display: flex;
-  flex-direction: column;
-  align-items:center;
-}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .results--wrapper{
     padding-top: 21px;
     .results--header{
@@ -461,7 +457,7 @@ $blue: #3bc5c2;
       width: 700px;
       display: flex;
       justify-content: space-between;
-            .betr__offer{
+      .betr__offer{
         color: #2a353f;
         font: 16px "Century Gothic", sans-serif;
         font-weight: 700;
@@ -487,7 +483,7 @@ $blue: #3bc5c2;
       }
     }
     .result--request.center--auto{
-      align-items:center;
+      align-items: center;
 
     }
     .result--request{
@@ -652,7 +648,6 @@ $blue: #3bc5c2;
   }
 }
 
-
 .footer{
   height: 60px;
   background: #281a3f;
@@ -661,16 +656,16 @@ $blue: #3bc5c2;
   position: relative;
   .img--left{
     position: absolute;
-    bottom:0;
-    left:0;
+    bottom: 0;
+    left: 0;
     width: 929px;
     height: 350px;
     background: url(../img/img-footer_left.png) no-repeat;
   }
   .img--right{
     position: absolute;
-    bottom:0;
-    right:0;
+    bottom: 0;
+    right: 0;
     width: 833px;
     height: 350px;
     background: url(../img/img-footer_right.png) no-repeat;
@@ -709,7 +704,7 @@ $blue: #3bc5c2;
       font: 14px "Gotham Pro", sans-serif;
     }
     input{
-      margin-top:10px;
+      margin-top: 10px;
       width: 420px;
       height: 50px;
       background-color: #f3f5f6;
@@ -725,7 +720,7 @@ $blue: #3bc5c2;
       font: 14px "Gotham Pro", sans-serif;
     }
     select{
-      margin-top:10px;
+      margin-top: 10px;
       width: 420px;
       height: 50px;
       background-color: #f3f5f6;
@@ -747,7 +742,7 @@ $blue: #3bc5c2;
         font: 14px "Gotham Pro", sans-serif;
       }
       .plus__minus{
-        margin-top:10px;
+        margin-top: 10px;
         display: flex;
         justify-content: space-between;
         .plus{
@@ -802,7 +797,7 @@ $blue: #3bc5c2;
         font: 14px "Gotham Pro", sans-serif;
       }
       select{
-        margin-top:10px;
+        margin-top: 10px;
         width: 230px;
         height: 50px;
         background-color: #f3f5f6;
@@ -812,6 +807,7 @@ $blue: #3bc5c2;
     }
   }
 }
+
 .btn__search-option{
   display: flex;
   width: 420px;
@@ -824,4 +820,74 @@ $blue: #3bc5c2;
     font-weight: 700;
     margin: auto;
   }
+}
+
+.none-320{
+  display: none;
+}
+
+@media only (max-width: 800px) {
+  .header--search, .content, .slider--arrows{
+    display: none;
+  }
+  .container{
+    width: 320px;
+  }
+  .wrapper{
+    width: 290px;
+  }
+  .header{
+    .header--nav{
+      display: none;
+    }
+    .none-320{
+      display: block;
+    }
+    .img-filter{
+      width: 22px;
+      background: url(../img/img-filter.png);
+      height: 24px;
+      cursor: pointer;
+    }
+    .img-dots{
+      width: 24px;
+      background: url(../img/img-dots.png);
+      height: 6px;
+      cursor: pointer;
+    }
+  }
+  .header--search{
+    display: block;
+    height:360px;
+    .svg__left, .svg__right, {
+      display: none;
+    }
+    .search-wrapper{
+      .search--input--wrapper{
+        flex-direction: column;
+        width: 290px;
+        margin:0;
+        position: relative;
+        .search__input{
+          width: 290px;
+          margin:15px 0 7px;
+        }
+        .search__btn{
+          width: 290px;
+          position: absolute;
+          top: 293px;
+        }
+      }
+      .search--result--wrapper{
+        flex-direction: column;
+        width: 290px;
+        .search--result{
+          width: 290px;
+          height:48px;
+          margin-bottom:7px;
+        }
+      }
+    }
+  }
+
 }
