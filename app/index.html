@@ -13,8 +13,8 @@
 
 	<!-- Custom styles for this template -->
 	<link href="styles/app.css" rel="stylesheet">
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
+	<link rel="stylesheet" href="fonts/awesome-library/css/font-awesome.css">
+	<link rel="stylesheet" href="fonts/fonts.css">
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 	<![endif]-->
@@ -81,21 +81,56 @@
 							<div class="will">Укажите свои пожелания</div>
 							<div class="count__star"><span>Количество звезд:</span><img src="img/ask.png" alt="ask"></div>
 							<div class="block__stars">
-								<div class="stars__inner">
-									<img src="img/www.svg" alt="" class="nnn">
-								</div>
-								<div class="stars__inner">
-									<div class="star__img">&#9733</div>
-								</div>
-								<div class="stars__inner">
-									<div class="star__img">&#9733</div>
-								</div>
-								<div class="stars__inner">
-									<div class="star__img">&#9733</div>
-								</div>
-								<div class="stars__inner">
-									<div class="star__img">&#9733</div>
-								</div>
+								<label class="checkbox-wrp-str">
+									<input type="checkbox"/>
+									<div class="stars__inner flex-column">
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</div>
+								</label>
+								<label class="checkbox-wrp-str">
+									<input type="checkbox"/>
+									<div class="stars__inner flex-column">
+										<div class="star-flex">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+								</label>
+								<label class="checkbox-wrp-str">
+									<input type="checkbox"/>
+									<div class="stars__inner flex-row">
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+										<i class="fa fa-star" aria-hidden="true"></i>
+									</div>
+								</label>
+								<label class="checkbox-wrp-str">
+									<input type="checkbox"/>
+									<div class="stars__inner flex-column">
+										<div class="star-flex">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+										<div class="star-flex">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+								</label>
+								<label class="checkbox-wrp-str">
+									<input type="checkbox"/>
+									<div class="stars__inner flex-column">
+										<div class="star-flex">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+										<div class="star-flex">
+											<i class="fa fa-star" aria-hidden="true"></i>
+											<i class="fa fa-star" aria-hidden="true"></i>
+										</div>
+									</div>
+								</label>
 							</div>
 						</div>
 					</div>
@@ -106,37 +141,44 @@
 						</div>
 
 						<div class="control-group">
-							<label class="control control--checkbox">RO
+							<label class="control control--checkbox">
 								<input type="checkbox">
+								<span class="checkbox--word">RO</span>
 								<div class="control__indicator"></div>
 							</label>
-							<label class="control control--checkbox">BB
+							<label class="control control--checkbox">
 								<input type="checkbox"/>
+								<span class="checkbox--word">BB</span>
 								<div class="control__indicator"></div>
 							</label>
-							<label class="control control--checkbox">HB
+							<label class="control control--checkbox">
 								<input type="checkbox"/>
+								<span class="checkbox--word">HB</span>
 								<div class="control__indicator"></div>
 							</label>
 
-							<label class="control control--checkbox">FB
+							<label class="control control--checkbox">
 								<input type="checkbox"/>
+								<span class="checkbox--word">FB</span>
 								<div class="control__indicator"></div>
 							</label>
 						</div>
 
 
 						<div class="control-group distance">
-							<label class="control control--checkbox">AI
+							<label class="control control--checkbox">
 								<input type="checkbox">
+								<span class="checkbox--word">AI</span>
 								<div class="control__indicator"></div>
 							</label>
-							<label class="control control--checkbox">UAI
+							<label class="control control--checkbox">
 								<input type="checkbox"/>
+								<span class="checkbox--word">UAI</span>
 								<div class="control__indicator"></div>
 							</label>
-							<label class="control control--checkbox slow">Любое
+							<label class="control control--checkbox slow">
 								<input type="checkbox"/>
+								<span class="checkbox--word">Любое</span>
 								<div class="control__indicator"></div>
 							</label>
 						</div>
@@ -145,15 +187,17 @@
 
 				<div class="filter__stop">
 					<div class="check-box distance">
-						<label class="control control--checkbox"><span class="wer">Есть места на рейсе</span>
+						<label class="control control--checkbox">
 							<input type="checkbox">
+							<span class="checkbox--word">Есть места на рейсе</span>
 							<div class="control__indicator"></div>
 						</label>
 						<img src="img/ask.png" alt="ask">
 					</div>
 					<div class="check-box">
-						<label class="control control--checkbox">Нет остановки продаж
+						<label class="control control--checkbox">
 							<input type="checkbox">
+							<span class="checkbox--word">Нет остановки продаж</span>
 							<div class="control__indicator"></div>
 						</label>
 						<img src="img/ask.png" alt="ask">
@@ -171,7 +215,6 @@
 							<option>Kiev</option>
 						</select>
 						<select name="" id="" class="search--result4">
-							<div>jhj</div>
 							<option>Odessa</option>
 							<option>Kiev</option>
 						</select>

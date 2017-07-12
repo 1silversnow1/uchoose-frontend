@@ -105,7 +105,7 @@ $blue: #3bc5c2;
     justify-content: center;
     height: 116px;
     position: relative;
-    .header-form {
+    .header-form{
       position: relative;
     }
 
@@ -113,10 +113,10 @@ $blue: #3bc5c2;
       position: absolute;
       left: 0;
       transform: translateX(-105%);
-      toP: -11px;
+      top: -11px;
       width: 398px;
       height: 150px;
-      background: url(../img/svg_left.png),no-repeat;
+      background: url(../img/svg_left.png), no-repeat;
     }
     .svg__right{
       position: absolute;
@@ -171,6 +171,7 @@ $blue: #3bc5c2;
   .filter--wrapper{
     padding: 20px 30px;
     width: 300px;
+    height: 825px;
     background-color: #f3f5f6;
     .filter--wrapper__inner{
       width: 240px;
@@ -178,7 +179,7 @@ $blue: #3bc5c2;
         .filter__inner1{
           .will{
             color: #2a353f;
-            font: 16px "Century Gothic", sans-serif;
+            font: 16px "CenturyGothic", sans-serif;
             font-weight: 700;
           }
           .count__star{
@@ -199,20 +200,51 @@ $blue: #3bc5c2;
               height: 41px;
               border: 4px solid #d2d2d2;
               display: flex;
+              cursor: pointer;
               &:hover{
                 border: 4px solid #281a3f;
               }
-              .star__img{
-                width: 14px;
-                height: 14px;
-                margin: auto;
-              }
+            }
+            .checkbox-wrp-str input:checked ~ .stars__inner{
+              border: 4px solid #281a3f;
+            }
+            .checkbox-wrp-str input:checked ~ .stars__inner .fa.fa-star{
+              color: #281a3f;
+            }
+            .checkbox-wrp-str input:checked ~ .stars__inner .star-flex .fa.fa-star{
+              color: #281a3f;
+            }
+            .stars__inner:hover > .fa.fa-star{
+              color: #281a3f;
+            }
+            .stars__inner:hover > .star-flex .fa.fa-star{
+              color: #281a3f;
+            }
+            .stars__inner.flex-column{
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+            }
+            .stars__inner.flex-row{
+              align-items: center;
+              justify-content: center
             }
           }
-
         }
-
       }
+    }
+    .fa-star{
+      color: #d2d2d2;
+      font-size: 10px;
+    }
+    .star-flex{
+      display: flex;
+
+    }
+    .block__stars input{
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
     }
 
     .control-group{
@@ -236,7 +268,6 @@ $blue: #3bc5c2;
       position: absolute;
       z-index: -1;
       opacity: 0;
-
     }
     .block{
       display: flex;
@@ -265,7 +296,7 @@ $blue: #3bc5c2;
     .control input:checked ~ .control__indicator{
       border: 2px solid #24133d;
     }
-    .control input:checked{
+    .control input:checked ~ .checkbox--word{
       color: #24133d;
     }
     .control__indicator{
@@ -865,7 +896,7 @@ $blue: #3bc5c2;
   }
   .header--search{
     display: block;
-    height:360px;
+    height: 360px;
     .svg__left, .svg__right, {
       display: none;
     }
@@ -873,11 +904,11 @@ $blue: #3bc5c2;
       .search--input--wrapper{
         flex-direction: column;
         width: 290px;
-        margin:0;
+        margin: 0;
         position: relative;
         .search__input{
           width: 290px;
-          margin:15px 0 7px;
+          margin: 15px 0 7px;
         }
         .search__btn{
           width: 290px;
@@ -890,8 +921,8 @@ $blue: #3bc5c2;
         width: 290px;
         .search--result{
           width: 290px;
-          height:48px;
-          margin-bottom:7px;
+          height: 48px;
+          margin-bottom: 7px;
         }
       }
     }
