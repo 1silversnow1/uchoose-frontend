@@ -670,6 +670,7 @@ $blue: #3bc5c2;
   img{
     width: 25px;
     height: 16px;
+    cursor: pointer;
   }
 
   .page{
@@ -677,6 +678,7 @@ $blue: #3bc5c2;
     height: 40px;
     border: 4px solid #3bc5c2;
     display: flex;
+    cursor: pointer;
     span{
       margin: auto;
       color: #3bc5c2;
@@ -865,8 +867,11 @@ $blue: #3bc5c2;
 }
 
 @media only (max-width: 800px) {
-  .header--search, .content, .slider--arrows{
+  .header--search, .filter--wrapper{
     display: none;
+  }
+  .footer{
+    margin-top: 33px;
   }
   .container{
     width: 320px;
@@ -881,6 +886,10 @@ $blue: #3bc5c2;
     .none-320{
       display: block;
     }
+    .none-1020{
+      display: none;
+    }
+
     .img-filter{
       width: 22px;
       background: url(../img/img-filter.png);
@@ -927,5 +936,121 @@ $blue: #3bc5c2;
       }
     }
   }
+  .extra--opt{
+    height: 60px;
+    background: #f3f5f6;
+    display: flex;
+    align-items: center;
+    img{
+      width: 9px;
+      height: 4px;
+      text-align: center;
+      align-self: center;
+    }
+  }
+  .extra__text{
+    color: #2a353f;
+    font: 16px "Century Gothic", sans-serif;
+    font-weight: 700;
+  }
+  .content{
+    .all--results--wrapper{
+      width: 100%;
+      .results--wrapper{
+        .results--header{
+          width: 100%;
+          .sort__price img{
+            display: none;
+          }
+          .betr__offer{
+            text-align: left;
+          }
+          .sort__text{
+            text-align: right;
+          }
+        }
+        .result--request.none{
+          display: none;
+        }
 
+        .result--request{
+          .request--wrapper.blue{
+            border: 4px solid $blue;
+          }
+          .request--wrapper.yellow{
+            border: 4px solid $yellow;
+            margin-bottom:16px;
+          }
+          .request--wrapper{
+            flex-direction: column;
+            height: 715px;
+            width: 290px;
+            padding: 13px 19px 0;
+            .img__holet{
+              display: none;
+            }
+            .request__descript{
+              width: 100%;
+            }
+            .descript--header{
+              flex-direction: column;
+              align-items: flex-start;
+              .tittle__hotel.none-1020{
+                display: none;
+              }
+              .tittle__hotel.none-320{
+                display: block;
+                margin-top: 16px;
+              }
+              .hotel--stars{
+                margin: 0;
+              }
+            }
+            .img__holet.none-320{
+              display: block;
+              height: 243px;
+              width: 100%;
+              margin-top: 15px;
+            }
+            .trip__view{
+              flex-direction: column;
+              .trip__order.yellow{
+                border-top: 4px solid $yellow;
+                border-left: none;
+              }
+
+              .trip__order{
+                border-left: none;
+                border-top: 4px solid #a6ce44;
+                margin-top: 20px;
+                padding-top: 15px;
+                align-items: center;
+                padding-left: 0;
+                .order__price{
+                  margin-bottom: 6px;
+                }
+                .order__btn, .hotel_about{
+                  width: 100%;
+                  margin: 17px 0 11px;
+                  .hotel__foto{
+                    width: 122px;
+                    height: 30px;
+                    padding: 6px 23px;
+                  }
+                  .hotel__inf{
+                    width: 107px;
+                    height: 30px;
+                    padding: 6px 22px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .slider--arrows{
+    width: 100%;
+  }
 }
