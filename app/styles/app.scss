@@ -865,7 +865,22 @@ $blue: #3bc5c2;
 .none-320{
   display: none;
 }
-
+.form-404{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1019px;
+  height: 235px;
+  border: 4px solid #ff9329;
+  margin:30px auto 740px;
+  font: 25px "Century Gothic", sans-sarif;
+  font-weight: 700;
+  color: #281a3f;
+  span{
+    text-decoration: underline;
+    color: #281a3f;
+  }
+}
 @media only (max-width: 800px) {
   .header--search, .filter--wrapper{
     display: none;
@@ -906,7 +921,7 @@ $blue: #3bc5c2;
   .header--search{
     display: block;
     height: 360px;
-    .svg__left, .svg__right, {
+    .svg__left, .svg__right{
       display: none;
     }
     .search-wrapper{
@@ -927,14 +942,27 @@ $blue: #3bc5c2;
       }
       .search--result--wrapper{
         flex-direction: column;
+        position: relative;
         width: 290px;
         .search--result{
           width: 290px;
           height: 48px;
           margin-bottom: 7px;
+          position: relative;
         }
       }
     }
+  }
+  .icon1:before{
+    content: "sdfsdfsdf";
+    display: block;
+    width:17px;
+    height:16px;
+    position: absolute;
+    border:1px solid red;
+    //background: url(../img/form-1.png);
+    //top:0;
+    //left:0;
   }
   .extra--opt{
     height: 60px;
@@ -1053,4 +1081,45 @@ $blue: #3bc5c2;
   .slider--arrows{
     width: 100%;
   }
+}
+
+//Styles for double-range inside the filter
+.ui-mini{
+  margin:0;
+}
+.ui-rangeslider .ui-slider-input.ui-rangeslider-last{
+  float: right;
+}
+.ui-rangeslider .ui-rangeslider-sliders{
+  margin: -10px 0 0;
+}
+.wowo{
+  width: 240px;
+  margin-left: 100px;
+}
+.ui-slider-track.ui-mini{
+  height:4px;
+}
+
+html >body .ui-rangeslider.ui-mini .ui-rangeslider-sliders .ui-slider-track:first-child{
+  height:4px;
+}
+.ui-slider-track.ui-mini{
+  background: #d3d3d3;
+  border:0px;
+}
+.ui-slider-track .ui-btn.ui-slider-handle{
+  background: #24133d;
+  border-radius: 50%;
+  border:0px;
+  box-shadow: none;
+}
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a{
+  border-radius:initial;
+  border:0px;
+  box-shadow:none;
+  width: 100px;
+}
+.ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head+body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active{
+  background: #39c6c3;
 }
