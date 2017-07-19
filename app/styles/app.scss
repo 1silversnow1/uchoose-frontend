@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'bootstrap/bootstrap.scss';
+@import 'theme';
 
 *{
   box-sizing: border-box;
@@ -1122,4 +1123,44 @@ html >body .ui-rangeslider.ui-mini .ui-rangeslider-sliders .ui-slider-track:firs
 }
 .ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head+body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active{
   background: #39c6c3;
+}
+
+.searching-filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 700px;
+  &__filter-item {
+    flex-grow: 1;
+    & + & {padding-left: 10px;}
+    @at-root .date-picker-input {
+      position: relative;
+      padding-left: 40px;
+      background: white;
+      color: lightgray;
+      &__icon {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+      }
+      &__label {
+        display: block;
+        padding: 5px 0;
+        color: lightgray;
+      }
+      &__input {
+        display: block;
+        width: 100%;
+        padding: 3px 0;
+        border: none;
+        outline: none;
+        &:focus,
+        &:active {outline: none;}
+      }
+    }
+  }
 }

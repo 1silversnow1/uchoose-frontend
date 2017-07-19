@@ -17,8 +17,10 @@
 	<link href="styles/app.css" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/awesome-library/css/font-awesome.css">
 	<link rel="stylesheet" href="fonts/fonts.css">
-	<!--<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
-	<!--<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>-->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 
 	<!-- Custom styles for this template -->
 	<!--<script src="scripts/jquery.range.min.js"></script>-->
@@ -26,6 +28,7 @@
 
 </head>
 <body>
+
 <div class="container">
 	<header class="header">
 		<div class="wrapper flex">
@@ -55,23 +58,35 @@
 							<span class="btn--text">Поиск</span>
 						</button>
 					</div>
-					<div class="search--result--wrapper flex">
-						<select name="" id="" class="search--result icon1">
-							<option>Odessa</option>
-							<option>Kiev</option>
-						</select>
-						<select name="" id="" class="search--result">
-							<option>Odessa</option>
-							<option>Kiev</option>
-						</select>
-						<select name="" id="" class="search--result">
-							<option>Odessa</option>
-							<option>Kiev</option>
-						</select>
-						<select name="" id="" class="search--result">
-							<option>Odessa</option>
-							<option>Kiev</option>
-						</select>
+					<div class="searching-filter flex">
+						<div class="searching-filter__filter-item">
+							<div class="date-picker-input">
+								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<p class="date-picker-input__label">Заезд с:</p>
+								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+							</div>
+						</div>
+						<div class="searching-filter__filter-item">
+							<div class="date-picker-input">
+								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<p class="date-picker-input__label">Выезд по:</p>
+								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+							</div>
+						</div>
+						<div class="searching-filter__filter-item">
+							<div class="date-picker-input">
+								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<p class="date-picker-input__label">Заезд с:</p>
+								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+							</div>
+						</div>
+						<div class="searching-filter__filter-item">
+							<div class="date-picker-input">
+								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<p class="date-picker-input__label">Заезд с:</p>
+								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+							</div>
+						</div>
 					</div>
 				</form>
 			</div>
@@ -456,6 +471,9 @@
 </div>
 
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="scripts/main.js"></script>
 </body>
 </html>
 
