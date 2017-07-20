@@ -46,11 +46,13 @@
 		</div>
 	</header>
 	<div class="header--search">
+		<div class="header-background-imgs">
+			<img src="./img/svg_right.png" class="header-background-imgs__left-image"></img>
+			<img src="./img/svg_left.png" class="header-background-imgs__right-image"></img>
+		</div>
 		<div class="wrapper">
 			<div class="search-wrapper">
 				<form class="header-form">
-					<div class="svg__left"></div>
-					<div class="svg__right"></div>
 					<div class="search--input--wrapper">
 						<input type="text" placeholder
 								="Шарм-эль-Шейх" class="search__input">
@@ -70,21 +72,42 @@
 							<div class="date-picker-input">
 								<i class="date-picker-input__icon fa fa-calendar"></i>
 								<p class="date-picker-input__label">Выезд по:</p>
-								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+								<input class="date-picker-input__input icon1" type="text" id="header_out_date_picker" placeholder="Вс., 18/06/17">
 							</div>
 						</div>
 						<div class="searching-filter__filter-item">
-							<div class="date-picker-input">
+							<div class="date-picker-input c-dropdown js-dropdown">
 								<i class="date-picker-input__icon fa fa-calendar"></i>
-								<p class="date-picker-input__label">Заезд с:</p>
-								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+								<p class="date-picker-input__label">Выезд по:</p>
+								<input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+								<span class="date-picker-input__input c-button c-button--dropdown js-dropdown__current">Select JS Framework</span>
+								<ul class="c-dropdown__list">
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">
+										<div class="quantity">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+									</li>
+									<li class="c-dropdown__item" data-dropdown-value="детей">
+										<div class="quantity">
+											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+										</div>
+									</li>
+								</ul>
 							</div>
 						</div>
 						<div class="searching-filter__filter-item">
-							<div class="date-picker-input">
+							<div class="date-picker-input c-dropdown js-dropdown">
 								<i class="date-picker-input__icon fa fa-calendar"></i>
-								<p class="date-picker-input__label">Заезд с:</p>
-								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+								<p class="date-picker-input__label">Выезд по:</p>
+								<input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+								<span class="date-picker-input__input c-button c-button--dropdown js-dropdown__current">Select JS Framework</span>
+								<ul class="c-dropdown__list">
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Виница</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Луцк</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Одесса</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Киев</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Ужгород</li>
+								</ul>
 							</div>
 						</div>
 					</div>
@@ -237,20 +260,41 @@
 					<div class="night__sum">
 						<span>Количество ночей:</span>
 					</div>
-					<div class="nights__select">
-						<select name="" id="" class="search--result4">
-							<div>jhj</div>
-							<option>Odessa</option>
-							<option>Kiev</option>
-						</select>
-						<select name="" id="" class="search--result4">
-							<option>Odessa</option>
-							<option>Kiev</option>
-						</select>
+					<div class="night-select-row nights__select">
+						<div class="night-select-row__input">
+							<div class="date-picker-input date-picker-input--simple c-dropdown js-dropdown">
+								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<p class="date-picker-input__label">Выезд по:</p>
+								<input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+								<span class="date-picker-input__input c-button c-button--dropdown js-dropdown__current">От:</span>
+								<ul class="c-dropdown__list">
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Виница</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Луцк</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Одесса</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Киев</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Ужгород</li>
+								</ul>
+							</div>
+						</div>
+						<div class="night-select-row__input">
+							<div class="date-picker-input date-picker-input--simple c-dropdown js-dropdown">
+								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<p class="date-picker-input__label">Выезд по:</p>
+								<input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
+								<span class="date-picker-input__input c-button c-button--dropdown js-dropdown__current">До:</span>
+								<ul class="c-dropdown__list">
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Виница</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Луцк</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Одесса</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Киев</li>
+									<li class="c-dropdown__item" data-dropdown-value="взрослых">Ужгород</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div class="filter__price">
-					<div class="price__inner">Стоимость:</div>
+					<!--<div class="price__inner">Стоимость:</div>
 					<div class="from-to">
 						<div class="price__from">
 							<span>От:</span>
@@ -269,12 +313,12 @@
 						    <div data-role="rangeslider" data-mini="true">
 						<input type="range" name="range-4a" id="range-4a" min="0" max="100000" value="0">
 						 		<input type="range" name="range-4b" id="range-4b" min="0" max="100000" value="100000">
-						        <!-- <label for="range-4a">From:</label>
+						        &lt;!&ndash; <label for="range-4a">From:</label>
 				        
-				        <label for="range-4b">To:</label> -->
+				        <label for="range-4b">To:</label> &ndash;&gt;
 						       
 						    </div>
-					</form>
+					</form>-->
 
 
 
@@ -469,7 +513,6 @@
 		<div class="sign--company">Разработано компанией <span>EasyWorld</span>, 2017</div>
 	</footer>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
