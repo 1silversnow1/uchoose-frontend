@@ -27,6 +27,10 @@ $(document).ready(function() {
                 return $('input').get(0).id;
             });
             $('#ui-datepicker-div').addClass(this.id);
+            $('#ui-datepicker-div').addClass('header_entry_date_picker');
+        },
+        onClose: function() {
+            $('#ui-datepicker-div').removeClass('header_entry_date_picker');
         }
     });
 
@@ -36,10 +40,14 @@ $(document).ready(function() {
                 return $('input').get(0).id;
             });
             $('#ui-datepicker-div').addClass(this.id);
+            $('#ui-datepicker-div').addClass('header_out_date_picker');
+        },
+        onClose: function() {
+            $('#ui-datepicker-div').removeClass('header_out_date_picker');
         }
     });
 
-    window.inputNumber = function(el) {
+    window.inputNumber = function(el, type) {
 
         let min = el.attr('min') || false;
         let max = el.attr('max') || false;
@@ -47,7 +55,7 @@ $(document).ready(function() {
         let els = {};
 
         els.dec = el.prev();
-        els.inc = el.next();
+        els.inc = el.next().next();
 
         el.each(function() {
             init($(this));
@@ -62,6 +70,12 @@ $(document).ready(function() {
                 $event.stopPropagation();
                 let value = el[0].value;
                 value--;
+                if (type === 'adult') {
+                    $('#number_count_input_preview_adult').text(value);
+                }
+                if (type === 'child') {
+                    $('#number_count_input_preview_child').text(value);
+                }
                 if(!min || value >= min) {
                     el[0].value = value;
                 }
@@ -71,14 +85,32 @@ $(document).ready(function() {
                 $event.stopPropagation();
                 let value = el[0].value;
                 value++;
+                if (type === 'adult') {
+                    $('#number_count_input_preview_adult').text(value);
+                }
+                if (type === 'child') {
+                    $('#number_count_input_preview_child').text(value);
+                }
                 if(!max || value <= max) {
                     el[0].value = value++;
                 }
             }
         }
     };
-    inputNumber($('.input-number'));
+    inputNumber($('#input_number_adult'), 'adult');
+    inputNumber($('#input_number_child'), 'child');
 
+    $('#number_count_input_wrapper').on('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        $('#number_count_input_drop_down').toggleClass('opened');
+    });
+    $('#number_count_input_drop_down').on('click', function(e){
+        e.stopPropagation();
+    })
+    $(window).on('click', function(e) {
+        $('#number_count_input_drop_down').removeClass('opened');
+    })
 
     let $html = $('html');
     $html.on('click.ui.dropdown', '.js-dropdown', function(e) {
@@ -98,4 +130,37 @@ $(document).ready(function() {
             $('.js-dropdown').removeClass('is-open');
         }
     });
+
+
+    var html5Slider = document.getElementById('html5slider');
+    noUiSlider.create(html5Slider, {
+        start: [ 10, 30 ],
+        connect: true,
+        range: {
+            'min': -20,
+            'max': 40
+        }
+    });
+    var rangeNumberTo = document.getElementById('range_number_to');
+    var rangeNumberFrom = document.getElementById('range_number_from');
+
+    html5Slider.noUiSlider.on('update', function( values, handle ) {
+
+        var value = values[handle];
+
+        if ( handle ) {
+            rangeNumberTo.value = value;
+        } else {
+            rangeNumberFrom.value = Math.round(value);
+        }
+    });
+
+    rangeNumberFrom.addEventListener('change', function(){
+        html5Slider.noUiSlider.set([this.value, null]);
+    });
+
+    rangeNumberTo.addEventListener('change', function(){
+        html5Slider.noUiSlider.set([null, this.value]);
+    });
+
 });

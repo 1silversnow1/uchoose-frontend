@@ -3,6 +3,7 @@
 @import 'theme';
 @import 'number-input';
 @import 'select';
+@import 'nouislider';
 
 *{
   box-sizing: border-box;
@@ -1194,5 +1195,53 @@ html >body .ui-rangeslider.ui-mini .ui-rangeslider-sliders .ui-slider-track:firs
 }
 
 
+.header_entry_date_picker {
+  transform: translate(11px, -1px) !important;
+}
+.header_out_date_picker {
+  transform: translate(196px, -1px) !important;
+}
 
+.input-number {
+  width: 19px!important;
+  height: auto!important;
+  margin: 0 5px;
+  text-align: left;
+  padding: 0;
+  line-height: 1;
+  vertical-align: middle;
+  border: none;
+  outline: none;
+}
+.input-number-decrement.custom,
+.input-number-increment.custom {
+  border: none !important;
+  padding: 5px !important;
+  height: auto !important;
+  line-height: 1 !important;
+  border-radius: 5px !important;
+}
+
+.number-count-quantity {text-align: center;}
+.quantity-wrapper {display: inline-block;}
+
+.number-count {
+  display: none !important;
+  position: absolute;
+  background: white;
+  left: 0;
+  width: 100%;
+  &.opened {
+    display: block !important;
+  }
+}
+
+.input-number-desc {
+  font-size: 14px !important;
+  margin-right: 5px;
+}
+
+.number-count-row {
+  margin-bottom: 10px;
+}
 

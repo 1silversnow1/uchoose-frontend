@@ -11,8 +11,6 @@
 
 	<title>Theme Template for Bootstrap</title>
 
-	<link rel="stylesheet" href="styles/jquery.range.mobile-1.4.5.min.css">
-
 	<!-- Custom styles for this template -->
 	<link href="styles/app.css" rel="stylesheet">
 	<link rel="stylesheet" href="fonts/awesome-library/css/font-awesome.css">
@@ -21,11 +19,6 @@
 
 	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-
-	<!-- Custom styles for this template -->
-	<!--<script src="scripts/jquery.range.min.js"></script>-->
-	<!--<script src="scripts/jquery.range.mobile-1.4.5.min.js"></script>-->
-
 </head>
 <body>
 
@@ -76,20 +69,25 @@
 							</div>
 						</div>
 						<div class="searching-filter__filter-item">
-							<div class="date-picker-input c-dropdown js-dropdown">
-								<i class="date-picker-input__icon fa fa-calendar"></i>
-								<p class="date-picker-input__label">Выезд по:</p>
-								<input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
-								<span class="date-picker-input__input c-button c-button--dropdown js-dropdown__current">Select JS Framework</span>
-								<ul class="c-dropdown__list">
-									<li class="c-dropdown__item" data-dropdown-value="взрослых">
-										<div class="quantity">
-											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+							<div class="date-picker-input">
+                                <div id="number_count_input_wrapper" class="date-picker-input__wrapper">
+                                    <i class="date-picker-input__icon fa fa-calendar"></i>
+                                    <p class="date-picker-input__label">Выезд по:</p>
+                                    <span class="number-count-input-preview date-picker-input__input c-button c-button--dropdown js-dropdown__current"><span id="number_count_input_preview_adult">1</span> взр. + <span id="number_count_input_preview_child">1</span> реб</span>
+                                </div>
+								<ul id="number_count_input_drop_down" class="number-count">
+									<li class="number-count-row">
+										<div class="quantity number-count-quantity">
+											<div class="quantity-wrapper">
+                                                <span class="input-number-decrement custom">–</span><input id="input_number_adult" class="input-number" size="20" type="text" value="1" min="0" max="99"><span class="input-number-desc">Взрослых</span><span class="input-number-increment custom">+</span>
+                                            </div>
 										</div>
 									</li>
-									<li class="c-dropdown__item" data-dropdown-value="детей">
-										<div class="quantity">
-											<span class="input-number-decrement">–</span><input class="input-number" type="text" value="1" min="0" max="10"><span class="input-number-increment">+</span>
+									<li class="number-count-row">
+										<div class="quantity number-count-quantity">
+											<div class="quantity-wrapper">
+                                                <span class="input-number-decrement custom">–</span><input id="input_number_child" class="input-number" size="20" type="text" value="1" min="0" max="99"><span class="input-number-desc">Детей</span><span class="input-number-increment custom">+</span>
+                                            </div>
 										</div>
 									</li>
 								</ul>
@@ -294,36 +292,23 @@
 					</div>
 				</div>
 				<div class="filter__price">
-					<!--<div class="price__inner">Стоимость:</div>
+
+					<div class="price__inner">Стоимость:</div>
 					<div class="from-to">
 						<div class="price__from">
 							<span>От:</span>
-							<input type="text" placeholder="1000">
+							<input id="range_number_from" type="text" placeholder="1000">
 						</div>
 						<div class="price__to">
 							<span>До:</span>
-							<input type="text" placeholder="10 000">
+							<input id="range_number_to" type="text" placeholder="10 000">
 						</div>
 					</div>
-
-
-
-
 					<form>
-						    <div data-role="rangeslider" data-mini="true">
-						<input type="range" name="range-4a" id="range-4a" min="0" max="100000" value="0">
-						 		<input type="range" name="range-4b" id="range-4b" min="0" max="100000" value="100000">
-						        &lt;!&ndash; <label for="range-4a">From:</label>
-				        
-				        <label for="range-4b">To:</label> &ndash;&gt;
-						       
-						    </div>
-					</form>-->
-
-
-
-
-
+                        <div data-role="rangeslider" data-mini="true">
+                            <div id="html5slider"></div>				       
+                        </div>
+					</form>
 
 					<div class="btn__enter">
 						<span>Применить фильтр</span>
@@ -514,8 +499,10 @@
 	</footer>
 </div>
 
+
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="scripts/nouislider.js"></script>
 <script src="scripts/main.js"></script>
 </body>
 </html>
