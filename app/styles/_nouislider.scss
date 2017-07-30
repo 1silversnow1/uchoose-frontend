@@ -62,13 +62,14 @@
 /* Slider size and handle placement;
  */
 .noUi-horizontal {
-  height: 18px;
+  height: 4px;
 }
 .noUi-horizontal .noUi-handle {
-  width: 34px;
-  height: 28px;
-  left: -17px;
+  width: 16px;
+  height: 16px;
+  left: -15px;
   top: -6px;
+  outline:none;
 }
 .noUi-vertical {
   width: 18px;
@@ -82,13 +83,11 @@
 /* Styling;
  */
 .noUi-target {
-  background: #FAFAFA;
-  border-radius: 4px;
-  border: 1px solid #D3D3D3;
-  box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB;
+  border-radius: 2px;
+  background-color: #d2d2d2;
 }
 .noUi-connect {
-  background: #3FB8AF;
+  background: #39c6c3;
   border-radius: 4px;
   box-shadow: inset 0 0 3px rgba(51, 51, 51, 0.45);
   -webkit-transition: background 450ms;
@@ -103,27 +102,16 @@
   cursor: ns-resize;
 }
 .noUi-handle {
-  border: 1px solid #D9D9D9;
-  border-radius: 3px;
-  background: #FFF;
+  border-radius: 50%;
+  background: #281a3f;
   cursor: default;
-  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
 }
-.noUi-active {
-  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
-}
+
 /* Handle stripes;
  */
 .noUi-handle:before,
 .noUi-handle:after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 14px;
-  width: 1px;
-  background: #E8E7E6;
-  left: 14px;
-  top: 6px;
+  display: none;
 }
 .noUi-handle:after {
   left: 17px;
@@ -194,6 +182,7 @@
   top: 100%;
   left: 0;
   width: 100%;
+
 }
 .noUi-value-horizontal {
   -webkit-transform: translate3d(-50%, 50%, 0);
@@ -238,8 +227,8 @@
 .noUi-tooltip {
   display: block;
   position: absolute;
-  border: 1px solid #D9D9D9;
-  border-radius: 3px;
+  //border: 1px solid #D9D9D9;
+  //border-radius: 3px;
   background: #fff;
   color: #000;
   padding: 5px;

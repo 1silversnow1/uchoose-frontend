@@ -29,12 +29,31 @@
 			<div class="header--tittle"><a href="">Uchoose</a></div>
 			<div class="img-dots none-320"></div>
 			<ul class="header--nav flex">
-				<li><a href="" class="flex">
-					<div class="header__favorit1">&#10084</div>
-					<div class="header__favorit2">избранное</div>
-				</a></li>
-				<li><a href="#">UAH</a></li>
-				<li><a href="#">Контакты</a></li>
+
+
+				<li class="top-nav-head">
+					<a href="" class="flex nav-a-head">
+						<div class="header__favorit1">&#10084</div>
+						<div class="header__favorit2">избранное</div>
+					</a>
+				</li>
+
+				<li class="top-nav-head">
+					<div class="nav-head-bord1"></div>
+					<a href="#" class="nav-a-head">UAH</a>
+				</li>
+
+				<li class="top-nav-head">
+					<div class="nav-head-bord2"></div>
+					<a href="#" class="nav-a-head">Контакты</a>
+					<div class="drop-contact">
+						<div>+38 098 228 10 01</div>
+						<div>+38 098 228 10 01</div>
+						<div>+38 098 228 10 01</div>
+						<div>artur_gangster@gmail.com</div>
+					</div>
+				</li>
+
 			</ul>
 		</div>
 	</header>
@@ -56,38 +75,60 @@
 					<div class="searching-filter flex">
 						<div class="searching-filter__filter-item">
 							<div class="date-picker-input">
-								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<i class="date-picker-input__icon">
+									<img src="img/search--result1.png" alt="">
+								</i>
 								<p class="date-picker-input__label">Заезд с:</p>
-								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker" placeholder="Вс., 18/06/17">
+								<input class="date-picker-input__input icon1" type="text" id="header_entry_date_picker"
+										 placeholder="Вс., 18/06/17">
 							</div>
 						</div>
 						<div class="searching-filter__filter-item">
 							<div class="date-picker-input">
-								<i class="date-picker-input__icon fa fa-calendar"></i>
+								<i class="date-picker-input__icon">
+									<img src="img/search--result2.png" alt="">
+								</i>
 								<p class="date-picker-input__label">Выезд по:</p>
-								<input class="date-picker-input__input icon1" type="text" id="header_out_date_picker" placeholder="Вс., 18/06/17">
+								<input class="date-picker-input__input icon1" type="text" id="header_out_date_picker"
+										 placeholder="Вс., 18/06/17">
 							</div>
 						</div>
 						<div class="searching-filter__filter-item">
 							<div class="date-picker-input">
-                                <div id="number_count_input_wrapper" class="date-picker-input__wrapper">
-                                    <i class="date-picker-input__icon fa fa-calendar"></i>
-                                    <p class="date-picker-input__label">Выезд по:</p>
-                                    <span class="number-count-input-preview date-picker-input__input c-button c-button--dropdown js-dropdown__current"><span id="number_count_input_preview_adult">1</span> взр. + <span id="number_count_input_preview_child">1</span> реб</span>
-                                </div>
+								<div id="number_count_input_wrapper" class="date-picker-input__wrapper">
+									<i class="date-picker-input__icon">
+										<img src="img/search--result3.png" alt="">
+									</i>
+									<p class="date-picker-input__label">Размещение:</p>
+									<span class="number-count-input-preview date-picker-input__input c-button c-button--dropdown js-dropdown__current"><span
+											id="number_count_input_preview_adult">1</span> взр. + <span
+											id="number_count_input_preview_child">1</span> реб</span>
+								</div>
 								<ul id="number_count_input_drop_down" class="number-count">
 									<li class="number-count-row">
 										<div class="quantity number-count-quantity">
 											<div class="quantity-wrapper">
-                                                <span class="input-number-decrement custom">–</span><input id="input_number_adult" class="input-number" size="20" type="text" value="1" min="0" max="99"><span class="input-number-desc">Взрослых</span><span class="input-number-increment custom">+</span>
-                                            </div>
+												<span class="input-number-decrement custom">–</span><input id="input_number_adult"
+																															  class="input-number"
+																															  size="20" type="text"
+																															  value="1" min="0"
+																															  max="99"><span
+													class="input-number-desc">Взрослых</span><span
+													class="input-number-increment custom">+</span>
+											</div>
 										</div>
 									</li>
 									<li class="number-count-row">
 										<div class="quantity number-count-quantity">
 											<div class="quantity-wrapper">
-                                                <span class="input-number-decrement custom">–</span><input id="input_number_child" class="input-number" size="20" type="text" value="1" min="0" max="99"><span class="input-number-desc">Детей</span><span class="input-number-increment custom">+</span>
-                                            </div>
+												<span class="input-number-decrement custom">–</span><input id="input_number_child"
+																															  class="input-number"
+																															  size="20" type="text"
+																															  value="1" min="0"
+																															  max="99"><span
+													class="input-number-desc">Детей</span><span
+													class="input-number-increment custom">+</span>
+											</div>
 										</div>
 									</li>
 								</ul>
@@ -95,10 +136,13 @@
 						</div>
 						<div class="searching-filter__filter-item">
 							<div class="date-picker-input c-dropdown js-dropdown">
-								<i class="date-picker-input__icon fa fa-calendar"></i>
-								<p class="date-picker-input__label">Выезд по:</p>
+								<i class="date-picker-input__icon">
+									<img src="img/search--result4.png" alt="">
+								</i>
+								<p class="date-picker-input__label">Вылет из:</p>
 								<input type="hidden" name="Framework" id="Framework" class="js-dropdown__input">
-								<span class="date-picker-input__input c-button c-button--dropdown js-dropdown__current">Select JS Framework</span>
+								<span class="date-picker-input__input c-button c-button--dropdown js-dropdown__current">Дубаи
+								</span>
 								<ul class="c-dropdown__list">
 									<li class="c-dropdown__item" data-dropdown-value="взрослых">Виница</li>
 									<li class="c-dropdown__item" data-dropdown-value="взрослых">Луцк</li>
@@ -305,9 +349,12 @@
 						</div>
 					</div>
 					<form>
-                        <div data-role="rangeslider" data-mini="true">
-                            <div id="html5slider"></div>				       
-                        </div>
+						    
+						<div data-role="rangeslider" data-mini="true">
+							<div id="html5slider"></div>
+							       
+							    
+						</div>
 					</form>
 
 					<div class="btn__enter">

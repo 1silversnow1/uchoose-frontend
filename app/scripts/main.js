@@ -134,11 +134,11 @@ $(document).ready(function() {
 
     var html5Slider = document.getElementById('html5slider');
     noUiSlider.create(html5Slider, {
-        start: [ 10, 30 ],
+        start: [ 10000, 50000 ],
         connect: true,
         range: {
-            'min': -20,
-            'max': 40
+            'min': 0,
+            'max': 100000
         }
     });
     var rangeNumberTo = document.getElementById('range_number_to');

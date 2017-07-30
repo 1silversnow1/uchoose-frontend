@@ -23,6 +23,8 @@
   opacity: 1;
   visibility: visible;
   top: 100%;
+  z-index: 2;
+  box-shadow: -8px 8px 8px -1px rgba(0,0,0,0.05);
 }
 
 .c-dropdown__item {
